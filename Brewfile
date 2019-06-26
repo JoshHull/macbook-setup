@@ -42,7 +42,8 @@ cask "vlc" #vlc media player
 cask "zoomus" #meeting software used by imm registry ppl
 cask "evernote"
 cask "notion"
+cask "fliqlo" #screensaver!
 # cask "datagrip"
 # cask "intellij-idea"
 #mas "Magnet", id: 441258766
-#mas "Monosnap", id: 540348655
+## mas "Monosnap", id: 540348655
