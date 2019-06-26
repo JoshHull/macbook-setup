@@ -38,8 +38,8 @@ brew doctor
 echo_ok "Updating homebrew..."
 brew update
 
-echo_ok "Installing Git..."
-brew install git
+# echo_ok "Installing Git..."  #already installed with xcode-select
+# brew install git
 
 echo_ok "Git config"
 git config --global user.name "Josh Hull"
@@ -69,7 +69,7 @@ brew cleanup
 echo_waarn "Open Chrome and set as default browser 💻"
 read -p "Press [Enter] once this is done."
 
-echo_ok "Installing Python related items 🐍"
+# echo_ok "Installing Python related items 🐍"
 # echo " * intalling virturalenv"
 # sudo pip3 install virtualenv
 echo " * installing direnv"
