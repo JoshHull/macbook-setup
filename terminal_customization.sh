@@ -13,11 +13,12 @@ alias ip-local="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -E
 
 # >>1
 
-ssh-add -K ~/.ssh/ted_db &> /dev/null
-ssd-add -A &> /dev/null
+# ssh-add -K ~/.ssh/ted_db &> /dev/null
+# ssd-add -A &> /dev/null
 
 # Functions <<1
 #===============================================================================
+
 
 # Python webserver <<2
 #-------------------------------------------------------------------------------
@@ -26,15 +27,18 @@ ssd-add -A &> /dev/null
 #  with other machines on the local net work with IP:8000
 #  the function will display the current machines ip address
 #-------------------------------------------------------------------------------
-function pyserve() {
-	if [ "$(uname)" = "Darwin" ]; then
-		local_ip=`ifconfig | grep 192 | cut -d ' ' -f 2`
-	else
-		local_ip=`hostname -I | cut -d " " -f 1`
-	fi
-	echo "connect to $local_ip:8000"
-		python -m SimpleHTTPServer > /dev/null 2>&1
-	}
+# function pyserve() {
+# 	if [ "$(uname)" = "Darwin" ]; then
+# 		local_ip=`ifconfig | grep 192 | cut -d ' ' -f 2`
+# 	else
+# 		local_ip=`hostname -I | cut -d " " -f 1`
+# 	fi
+# 	echo "connect to $local_ip:8000"
+# 		python -m SimpleHTTPServer > /dev/null 2>&1
+# 	}
+
+
+
 # >>2
 # Work Timer <<2
 #-------------------------------------------------------------------------------
@@ -248,7 +252,7 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 # >>1
 
 
-# inspierd from http://erikaybar.name/git-deleting-old-local-branches/
+# inspired from http://erikaybar.name/git-deleting-old-local-branches/
 clean-git () {
 
 	IFS=$'\n' branches=($(git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}'))
@@ -271,7 +275,7 @@ clean-git () {
 				echo "Burn with Fire"
 				echo $branches | xargs git branch -D
 			else
-				echo "Nothing Delted"
+				echo "Nothing Deleted"
 			fi
 		else
 		 echo "Local repo is untouched"
