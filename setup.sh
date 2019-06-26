@@ -42,13 +42,14 @@ echo_ok "Installing Git..."
 brew install git
 
 echo_ok "Git config"
-git config --global user.name "Davis Crain"
-git config --global user.email dhcrain@gmail.com
+git config --global user.name "Josh Hull"
+git config --global user.email j.hull@@kunzleigh.com
 
-echo_ok "installing dotfiles"
-git clone https://github.com/JarrodCTaylor/dotfiles.git ~/dotfiles
-bash ~/dotfiles/install-scripts/OSX/install-packages.sh
-bash ~/dotfiles/install-scripts/OSX/create-symlinks.sh
+# I'm not sure whether I want to use this library.  
+# echo_ok "installing dotfiles"
+# git clone https://github.com/JarrodCTaylor/dotfiles.git ~/dotfiles
+# bash ~/dotfiles/install-scripts/OSX/install-packages.sh
+# bash ~/dotfiles/install-scripts/OSX/create-symlinks.sh
 
 echo_ok "Installing MAS 👨‍💻"
 # https://github.com/mas-cli/mas
@@ -69,18 +70,18 @@ echo_waarn "Open Chrome and set as default browser 💻"
 read -p "Press [Enter] once this is done."
 
 echo_ok "Installing Python related items 🐍"
-echo " * intalling virturalenv"
-sudo pip3 install virtualenv
+# echo " * intalling virturalenv"
+# sudo pip3 install virtualenv
 echo " * installing direnv"
 # http://direnv.net/
 brew install direnv
 echo 'eval "$(direnv hook zsh)"' >> .zshrc
 
-echo_warn "Login to Dropbox and have the Dropbox folder in the $HOME directory."
-read -p "Press [Enter] once this is done."
+# echo_warn "Login to Dropbox and have the Dropbox folder in the $HOME directory."
+# read -p "Press [Enter] once this is done."
 
-echo_warn "Find the settings for iTerm2 in Dropbox and link each one of these applications with their corresponding settings file. Also setup 1Password to sync with Dropbox."
-read -p "Press [Enter] once this is done."
+# echo_warn "Find the settings for iTerm2 in Dropbox and link each one of these applications with their corresponding settings file. Also setup 1Password to sync with Dropbox."
+# read -p "Press [Enter] once this is done."
 
 echo_ok "Installing Angular CLI"
 npm install -g @angular/cli
@@ -108,7 +109,7 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 echo_ok "Showing icons for hard drives, servers, and removable media on the desktop"
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 
