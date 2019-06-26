@@ -63,7 +63,6 @@ brew tap caskroom/fonts
 echo_ok "Installing apps from Brewfile 🙌"
 brew bundle install
 
-brew cask cleanup
 brew cleanup
 
 echo_waarn "Open Chrome and set as default browser 💻"
