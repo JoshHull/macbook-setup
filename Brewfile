@@ -44,7 +44,6 @@ cask "zoomus" #meeting software used by imm registry ppl
 cask "evernote"
 cask "notion"
 cask "fliqlo" #screensaver!
-# cask "datagrip"
-# cask "intellij-idea"
+cask "jetbrains-toolbox"
 #mas "Magnet", id: 441258766
 ## mas "Monosnap", id: 540348655
