@@ -36,7 +36,7 @@ cask "font-fira-code"
 ##cask "dbeaver-community" <- I use datagrip...
 cask "shimo"
 cask "parallels"
-cask "virtualbox"
+cask "virtualbox" # <- it's important to immediately approve "Oracle" in the security settings.  Otherwise this doesn't work. 
 cask "postgresql"
 cask "pgadmin4" #postgres admin tool
 cask "vlc" #vlc media player
