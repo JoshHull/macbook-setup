@@ -16,7 +16,7 @@ brew "tree" #Display directories as trees (with optional color/HTML output)
 brew "ripgrep"
 brew "gawk"
 brew "maven"
-#brew "git-standup" ##<- cooler if i use GIT more often
+brew "git-standup" ##<- cooler if i use GIT more often
 ## brew "ranger" <- try some day
 cask "gitkraken"
 ## cask "ngrok"  <- looks really cool.  should try sometime. 
