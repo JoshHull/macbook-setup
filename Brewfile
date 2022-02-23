@@ -30,11 +30,12 @@ cask "jd-gui"
 cask "java"
 cask "adoptopenjdk8"
 #cask "omnigraffle"
-#cask "visual-studio-code" #already installed
+cask "visual-studio-code" #already installed
 #cask "firefox"
 #cask "google-chrome" #already installed.
 #cask "slack"
 cask "font-fira-code"
+casek "font-hack-nerd-font"
 ##cask "dbeaver-community" <- I use datagrip...
 cask "shimo"
 #cask "parallels"
