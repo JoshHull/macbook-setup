@@ -16,7 +16,7 @@ brew "tree" #Display directories as trees (with optional color/HTML output)
 brew "ripgrep"
 brew "gawk"
 brew "maven"
-## brew "git-standup" <- cooler if i use GIT more often
+#brew "git-standup" ##<- cooler if i use GIT more often
 ## brew "ranger" <- try some day
 cask "gitkraken"
 ## cask "ngrok"  <- looks really cool.  should try sometime. 
@@ -24,26 +24,28 @@ cask "postman"
 cask "iterm2"
 cask "transmit"
 cask "telegram"
+cask "signal"
 cask "spotify"
 cask "jd-gui"
 cask "java"
-cask "omnigraffle"
+cask "adoptopenjdk8"
+#cask "omnigraffle"
 #cask "visual-studio-code" #already installed
-cask "firefox"
+#cask "firefox"
 #cask "google-chrome" #already installed.
-cask "slack"
+#cask "slack"
 cask "font-fira-code"
 ##cask "dbeaver-community" <- I use datagrip...
 cask "shimo"
-cask "parallels"
-cask "virtualbox" # <- it's important to immediately approve "Oracle" in the security settings.  Otherwise this doesn't work. 
+#cask "parallels"
+#cask "virtualbox" # <- it's important to immediately approve "Oracle" in the security settings.  Otherwise this doesn't work. 
 cask "postgresql"
 cask "pgadmin4" #postgres admin tool
 cask "vlc" #vlc media player
 cask "zoomus" #meeting software used by imm registry ppl
-cask "evernote"
-cask "notion"
+#cask "evernote"
+#cask "notion"
 cask "fliqlo" #screensaver!
-cask "jetbrains-toolbox"
+#cask "jetbrains-toolbox"
 #mas "Magnet", id: 441258766
 ## mas "Monosnap", id: 540348655
