@@ -17,10 +17,10 @@ echo_warn "Please add this public key to Github \n"
 echo_ok "https://github.com/settings/keys \n"
 read -p "Press [Enter] key after this..."
 
-echo_ok "Installing xcode-stuff"
-xcode-select --install
+# echo_ok "Installing xcode-stuff"
+# xcode-select --install
 
-sudo xcodebuild -license accept # Accepts the Xcode license
+# sudo xcodebuild -license accept # Accepts the Xcode license
 
 # Check for Homebrew,
 # Install if we don't have it
@@ -45,18 +45,6 @@ echo_ok "Git config"
 git config --global user.name "Josh Hull"
 git config --global user.email j.hull@@kunzleigh.com
 
-# I'm not sure whether I want to use this library.  
-# echo_ok "installing dotfiles"
-# git clone https://github.com/JarrodCTaylor/dotfiles.git ~/dotfiles
-# bash ~/dotfiles/install-scripts/OSX/install-packages.sh
-# bash ~/dotfiles/install-scripts/OSX/create-symlinks.sh
-
-echo_ok "Installing MAS 👨‍💻"
-# https://github.com/mas-cli/mas
-brew install mas
-read -p "What is your Apple ID email? " appleID
-mas signin $appleID
-
 echo_ok "Installing tap caskroom/fonts to Fira-code can be installed🙌"
 brew tap caskroom/fonts
 
@@ -65,35 +53,19 @@ brew bundle install
 
 brew cleanup
 
-echo_waarn "Open Chrome and set as default browser 💻"
-read -p "Press [Enter] once this is done."
-
-# echo_ok "Installing Python related items 🐍"
-# echo " * intalling virturalenv"
-# sudo pip3 install virtualenv
-echo " * installing direnv"
-# http://direnv.net/
-brew install direnv
-echo 'eval "$(direnv hook zsh)"' >> .zshrc
-
-# echo_warn "Login to Dropbox and have the Dropbox folder in the $HOME directory."
-# read -p "Press [Enter] once this is done."
-
-# echo_warn "Find the settings for iTerm2 in Dropbox and link each one of these applications with their corresponding settings file. Also setup 1Password to sync with Dropbox."
-# read -p "Press [Enter] once this is done."
-
 echo_ok "Installing Angular CLI"
 npm install -g @angular/cli
 
-# Check FileVault status
+# Check FileVault status ## THIS SHOULD BE HANDLED ALREADY
 echo "--> Checking full-disk encryption status:"
-if fdesetup status | grep $Q -E "FileVault is (On|Off, but will be enabled after the next restart)."; then
+if fdesetup status | grep $Q -E "FileVault is (On|OFF, THIS IS NOT GOOD)."; then
   echo_ok "OK 👌"
 else
-  echo_warn "Enabling full-disk encryption on next reboot:"
-  sudo fdesetup enable -user "$USER" \
-    | tee ~/Desktop/"FileVault Recovery Key.txt"
-  echo_ok "OK 👌"
+    echo_warn "You need to enable full-disk encryption"
+#   echo_warn "Enabling full-disk encryption on next reboot:"
+#   sudo fdesetup enable -user "$USER" \
+#     | tee ~/Desktop/"FileVault Recovery Key.txt"
+#   echo_ok "OK 👌"
 fi
 
 echo_ok "Expanding the save panel by default"
@@ -107,10 +79,10 @@ echo_ok "Automatically quit printer app once the print jobs complete"
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 echo_ok "Showing icons for hard drives, servers, and removable media on the desktop"
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 
 echo_ok "Disabling the warning when changing a file extension"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
