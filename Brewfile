@@ -17,8 +17,9 @@ brew "ripgrep" #ripgrep is a line-oriented search tool that recursively searches
 brew "gawk" #makes it possible to handle simple data-reformatting jobs with just a few lines of code https://www.gnu.org/software/gawk/ 
 brew "maven" #our build tool
 brew "git-standup" # tells you the commits you've made recently
+#brew "direnv" #cool directory specific environmental variables http://direnv.net/
 ## brew "ranger" <- try some day
-cask "gitkraken" #our teams default tool
+cask "gitkraken" #our teams default tool 
 ## cask "ngrok"  <- looks really cool.  should try sometime. 
 cask "postman" #heavily used for API testing
 cask "iterm2" #preferred terminal
