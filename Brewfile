@@ -36,7 +36,7 @@ cask "visual-studio-code" #preferred angular editor
 #cask "google-chrome" 
 #cask "slack"
 cask "font-fira-code"
-casek "font-hack-nerd-font"
+cask "font-hack-nerd-font"
 ##cask "dbeaver-community" <- I use datagrip...
 cask "shimo" #favorite SSH client
 #cask "parallels"
